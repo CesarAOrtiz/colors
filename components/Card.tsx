@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import { FC } from "react";
 import styles from "./Card.module.css";
 import { Color } from "../utils/colors";
 
@@ -6,7 +6,7 @@ interface CardProps {
     color: Color;
 }
 
-const Card: NextPage<CardProps> = ({ color }) => {
+const Card: FC<CardProps> = ({ color }) => {
     return (
         <div className={styles.cardContainer}>
             <div
