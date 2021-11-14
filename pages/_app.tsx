@@ -9,13 +9,12 @@ function App({ Component, pageProps }: AppProps) {
                 <title>Colors</title>
                 <meta
                     name="description"
-                    content="A colors palette app created whit nextjs"
+                    content="A color palette app created whit nextjs"
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div className="container">
-                <Component {...pageProps} />
-            </div>
+
+            <Component {...pageProps} />
         </>
     );
 }

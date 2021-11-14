@@ -1,5 +1,5 @@
 import Rgb from "./rgb";
-import Rgba from "./rgba";
+import Hsl from "./hsl";
 
 class Hex {
     constructor(public value: string) {
@@ -20,9 +20,8 @@ class Hex {
         return new Rgb(r, g, b);
     }
 
-    public toRgba(a: number): Rgba {
-        const rgb = this.toRgb();
-        return new Rgba(rgb.r, rgb.g, rgb.b, a);
+    public toHsl(): Hsl {
+        return this.toRgb().toHsl();
     }
 
     public toString(): string {

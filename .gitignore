@@ -35,3 +35,9 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# files
+ToolTipSelf.tsx
+hex.ts
+hsl.ts
+rgb.ts

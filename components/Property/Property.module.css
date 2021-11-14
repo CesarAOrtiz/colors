@@ -1,0 +1,11 @@
+.propertyContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0px;
+}
+.propertyText {
+    font-weight: bold;
+    font-size: 1rem;
+}
