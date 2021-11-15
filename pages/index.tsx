@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Link from "next/link";
+import { useEffect } from "react";
 import SearchInput from "../components/SearchInput";
 import Card from "../components/Card";
 import colors from "../utils/colors";
@@ -7,9 +8,14 @@ import colors from "../utils/colors";
 interface Props {
   search: string;
   setSearch: (search: string) => void;
+  setNavBg: (navBg: string) => void;
 }
 
-const Home: NextPage<Props> = ({ search, setSearch }) => {
+const Home: NextPage<Props> = ({ search, setSearch, setNavBg }) => {
+  useEffect(() => {
+    setNavBg("#FFFFFF");
+  }, [setNavBg]);
+
   const list = colors
     .filter(
       (color) =>

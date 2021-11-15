@@ -1,19 +1,23 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import { useEffect } from "react";
 import Card from "../../components/Card";
 import Property from "../../components/Property";
 import colors, { Color } from "../../utils/colors";
 
 interface ColorProps {
   color: Color | undefined;
-  search: string;
-  setSearch: (search: string) => void;
+  setNavBg: (navBg: string) => void;
 }
 
 const textColor = "#FFFFFF";
 
-const ColorPage: NextPage<ColorProps> = ({ color }) => {
+const ColorPage: NextPage<ColorProps> = ({ color, setNavBg }) => {
+  useEffect(() => {
+    setNavBg(color?.hex || "#FFFFFF");
+  }, [color, setNavBg]);
+
   if (!color) {
     return (
       <main className="cardSection">

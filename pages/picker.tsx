@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { useState, Suspense } from "react";
+import { useEffect, useState } from "react";
 import Property from "../components/Property";
 import { defaultColor } from "../components/ColorPicker";
 
@@ -26,8 +26,16 @@ const parseHsl = ({ h, s, l }: { h: number; s: number; l: number }) => {
 
 const textColor = "#FFFFFF";
 
-const PickerPage: NextPage = () => {
+interface Props {
+  setNavBg: (navBg: string) => void;
+}
+
+const PickerPage: NextPage<Props> = ({ setNavBg }) => {
   const [color, setColor] = useState(defaultColor);
+
+  useEffect(() => {
+    setNavBg(color.hex);
+  }, [color, setNavBg]);
 
   return (
     <>
@@ -44,7 +52,7 @@ const PickerPage: NextPage = () => {
             <Property name="RGB" value={parseRgb(color.rgb)} fill={textColor} />
             <Property name="HSL" value={parseHsl(color.hsl)} fill={textColor} />
             <div className="backContainer">
-              <Link href="/" scroll={false}>
+              <Link href="/">
                 <a className="backLink">Back to List</a>
               </Link>
             </div>
