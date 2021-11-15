@@ -45,7 +45,7 @@ const PickerPage: NextPage<Props> = ({ setNavBg }) => {
       </Head>
 
       <main className="cardSection" style={{ backgroundColor: color.hex }}>
-        <section className="cardBox">
+        <section className="cardBox blur">
           <ChromePicker color={color.hex} onChange={setColor} />
           <div className="colorProperty" style={{ color: textColor }}>
             <Property name="HEX" value={color.hex} fill={textColor} />

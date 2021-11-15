@@ -39,7 +39,7 @@ const ColorPage: NextPage<ColorProps> = ({ color, setNavBg }) => {
       </Head>
 
       <main className="cardSection" style={{ backgroundColor: color.hex }}>
-        <section className="cardBox">
+        <section className="cardBox blur">
           <Card color={color} />
           <div style={{ color: textColor }} className="colorProperty">
             <Property name="HEX" value={color.hex} fill={textColor} />

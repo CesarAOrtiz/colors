@@ -20,7 +20,7 @@ function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div style={{ backgroundColor: navBg }}>
-        <nav className="navbar">
+        <nav className="navbar blur">
           <div className="navContent">
             <Link href="/">
               <a className="navItem">Colors</a>
