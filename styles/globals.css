@@ -1,97 +1,105 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Helvetica, Arial, san-serif, -apple-system, BlinkMacSystemFont,
-        Segoe UI, Roboto, Oxygen, Ubuntu, Fira Sans, Droid Sans, Helvetica Neue;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, san-serif, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Oxygen, Ubuntu, Fira Sans, Droid Sans, Helvetica Neue;
 }
 :root {
-    --card-width: 200px;
-    --card-height: 220px;
+  --card-width: 200px;
+  --card-height: 220px;
 }
 body {
-    background: #f1f1f1;
+  background: #f1f1f1;
 }
 .container {
-    min-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
 .content {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
-.listMessage {
-    font-family: Helvetica, Arial, san-serif;
-    font-size: 2.125rem;
+.notFoundMessage {
+  font-family: Helvetica, Arial, san-serif;
+  font-size: 2.125rem;
 }
 .card-grid-container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(var(--card-width), 1fr));
-    grid-gap: 1rem;
-    place-items: center;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--card-width), 1fr));
+  grid-gap: 1rem;
+  place-items: center;
 }
 .cardSection {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    transition-property: background-color;
-    transition-duration: 0.25s;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  transition-property: background-color;
+  transition-duration: 0.25s;
 }
 .cardBox {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    max-width: 510px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 5px 20px 5px rgba(24, 24, 24, 0.5);
-    transition-property: background-color;
-    transition-duration: 0.25s;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 510px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px 5px rgba(24, 24, 24, 0.5);
+  transition-property: background-color;
+  transition-duration: 0.25s;
 
-    backdrop-filter: blur(12px) saturate(100%);
-    -webkit-backdrop-filter: blur(12px) saturate(100%);
-    background-color: rgba(17, 25, 40, 0.5);
+  backdrop-filter: blur(12px) saturate(100%);
+  -webkit-backdrop-filter: blur(12px) saturate(100%);
+  background-color: rgba(43, 48, 56, 0.5);
 }
 .colorProperty {
-    min-width: 230px;
+  min-width: 230px;
 }
 .backContainer {
-    display: flex;
-    flex-direction: column-reverse;
-    padding-top: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  padding-top: 10px;
 }
 .backLink {
-    border-radius: 10px;
-    padding: 0.5rem;
-    cursor: pointer;
-    font-style: italic;
-    text-align: center;
-    color: white;
-    border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-style: italic;
+  text-align: center;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
 }
 .backLink:hover {
-    font-weight: bold;
-    border: 2px solid rgba(255, 255, 255, 1);
+  font-weight: bold;
+  border: 2px solid rgba(255, 255, 255, 1);
 }
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
+}
+.pickerPlaceHolder {
+  height: 284px;
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 560px) {
-    .cardBox {
-        flex-direction: column;
-    }
-    .colorProperty {
-        margin-top: 10px;
-    }
+  .cardBox {
+    flex-direction: column;
+  }
+  .colorProperty {
+    margin-top: 10px;
+  }
 }
