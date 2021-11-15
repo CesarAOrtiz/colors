@@ -16,55 +16,32 @@ const ColorPage = ({ color }: ColorProps) => {
             </main>
         );
     }
-    const constrast = color.contrastText === "#000000" ? "white" : "black";
 
     return (
         <>
             <Head>
                 <title>{color.name}</title>
+                <meta name="description" content={`${color.name} color`} />
+                <meta name="theme-color" content={color.hex} />
                 <meta
-                    name="description"
-                    content={`${color.name} color values`}
+                    name="keywords"
+                    content={`${color.name}, ${color.hex}, ${color.rgb}, ${color.hsl}`}
                 />
-                <link rel="icon" href="/favicon.ico" />
             </Head>
 
             <main
                 className="cardSection"
                 style={{ backgroundColor: color.hex }}
             >
-                <section
-                    className="cardBox"
-                    style={{ backgroundColor: color.contrastText }}
-                >
+                <section className="cardBox">
                     <Card color={color} />
-                    <div style={{ color: constrast }} className="colorProperty">
-                        <Property
-                            name="HEX"
-                            value={color.hex}
-                            fill={constrast}
-                        />
-                        <Property
-                            name="RGB"
-                            value={color.rgb}
-                            fill={constrast}
-                        />
-                        <Property
-                            name="HSL"
-                            value={color.hsl}
-                            fill={constrast}
-                        />
+                    <div style={{ color: "#FFFFFF" }} className="colorProperty">
+                        <Property name="HEX" value={color.hex} fill="#FFFFFF" />
+                        <Property name="RGB" value={color.rgb} fill="#FFFFFF" />
+                        <Property name="HSL" value={color.hsl} fill="#FFFFFF" />
                         <div className="backContainer">
                             <Link href="/">
-                                <a
-                                    style={{
-                                        backgroundColor: color.hex,
-                                        color: color.contrastText,
-                                    }}
-                                    className="backLink"
-                                >
-                                    Back to List
-                                </a>
+                                <a className="backLink">Back to List</a>
                             </Link>
                         </div>
                     </div>

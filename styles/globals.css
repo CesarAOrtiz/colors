@@ -42,6 +42,8 @@ body {
     align-items: center;
     height: 100vh;
     width: 100%;
+    transition-property: background-color;
+    transition-duration: 0.25s;
 }
 .cardBox {
     display: flex;
@@ -52,7 +54,13 @@ body {
     max-width: 510px;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 20px 5px rgba(24, 24, 24, 0.5);
+    transition-property: background-color;
+    transition-duration: 0.25s;
+
+    backdrop-filter: blur(12px) saturate(100%);
+    -webkit-backdrop-filter: blur(12px) saturate(100%);
+    background-color: rgba(17, 25, 40, 0.5);
 }
 .colorProperty {
     min-width: 230px;
@@ -66,13 +74,14 @@ body {
     border-radius: 10px;
     padding: 0.5rem;
     cursor: pointer;
-    box-shadow: 2.5px 5px 5px 0px rgba(132, 132, 130, 0.3);
     font-style: italic;
     text-align: center;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.5);
 }
 .backLink:hover {
     font-weight: bold;
-    box-shadow: 2.5px 5px 5px 0px rgba(132, 132, 130, 0.2);
+    border: 2px solid rgba(255, 255, 255, 1);
 }
 a {
     color: inherit;

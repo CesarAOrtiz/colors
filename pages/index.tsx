@@ -11,8 +11,10 @@ const Home: NextPage = () => {
     const list = colors
         .filter(
             (color) =>
-                color.name.toLowerCase().includes(search.toLowerCase()) ||
-                color.hex.toLowerCase().includes(search.toLowerCase())
+                color.name
+                    .toLowerCase()
+                    .includes(search.toLowerCase().trim()) ||
+                color.hex.toLowerCase().includes(search.toLowerCase().trim())
         )
         .map((color) => {
             const hex = color.hex.replace(/#/g, "");

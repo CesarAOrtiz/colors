@@ -11,6 +11,7 @@ function App({ Component, pageProps }: AppProps) {
                     name="description"
                     content="A color palette app created whit nextjs"
                 />
+                <meta name="author" content="César Ortiz" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 

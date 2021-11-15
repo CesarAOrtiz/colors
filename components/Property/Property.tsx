@@ -6,11 +6,11 @@ import styles from "./Property.module.css";
 const Property = ({
     name,
     value,
-    fill,
+    fill = "#000000",
 }: {
     name: string;
     value: string;
-    fill: string;
+    fill?: string;
 }) => {
     const [open, setOpen] = useState(false);
     return (
