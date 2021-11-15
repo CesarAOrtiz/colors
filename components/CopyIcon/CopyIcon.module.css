@@ -1,0 +1,6 @@
+.copyIcon {
+    cursor: pointer;
+}
+.copyIcon:hover {
+    fill: green;
+}

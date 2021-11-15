@@ -49,13 +49,30 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 90%;
-    max-width: 500px;
+    max-width: 510px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
 }
 .colorProperty {
-    min-width: 220px;
+    min-width: 230px;
+}
+.backContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 10px;
+}
+.backLink {
+    border-radius: 10px;
+    padding: 0.5rem;
+    cursor: pointer;
+    box-shadow: 2.5px 5px 5px 0px rgba(132, 132, 130, 0.3);
+    font-style: italic;
+    text-align: center;
+}
+.backLink:hover {
+    font-weight: bold;
+    box-shadow: 2.5px 5px 5px 0px rgba(132, 132, 130, 0.2);
 }
 a {
     color: inherit;
@@ -64,5 +81,8 @@ a {
 @media (max-width: 560px) {
     .cardBox {
         flex-direction: column;
+    }
+    .colorProperty {
+        margin-top: 10px;
     }
 }

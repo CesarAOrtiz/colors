@@ -27,7 +27,6 @@ const Property = ({
                         await navigator.clipboard.writeText(value);
                         setOpen(true);
                     }}
-                    style={{ cursor: "pointer" }}
                 />
             </Tooltip>
         </div>

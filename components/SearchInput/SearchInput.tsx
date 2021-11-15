@@ -8,15 +8,14 @@ interface SearchInputProps {
 
 const SearchInput = ({ onChange, value, ...props }: SearchInputProps) => {
     return (
-        <div className={styles.searchContainer}>
-            <input
-                type="text"
-                placeholder="Search..."
-                onChange={onChange}
-                value={value}
-                {...props}
-            />
-        </div>
+        <input
+            type="text"
+            placeholder="Search..."
+            onChange={onChange}
+            value={value}
+            className={styles.searchInput}
+            {...props}
+        />
     );
 };
 export default SearchInput;
